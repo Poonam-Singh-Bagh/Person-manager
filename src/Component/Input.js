@@ -3,7 +3,7 @@ import React from 'react'
 function Input(props) {
     return (
         <div>
-            <input className="chng" type="text" onChange = {props.changed} />
+            <input className="chng" type="text" placeholder={props.placeholder} onChange = {props.changed} />
         </div>
     )
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { CardBody,Button } from 'reactstrap';
 import Cards from './Cards';
 import Input from './Input';
-import InputTask from './InputTask';
-
 
 class SwitchCard extends Component {
 
@@ -20,7 +18,7 @@ class SwitchCard extends Component {
     }
 
     onClickHandler = () => {
-        const isVisible = this.state.showCard
+        const isVisible = this.state.showCard 
         this.setState({
             showCard: !isVisible
         });
@@ -81,8 +79,8 @@ class SwitchCard extends Component {
                                 <p>Learning : {detail.studying}</p>
                                 <p>Task : {detail.task}</p>
                                 <p>ID : {detail.id}</p> 
-                                <Input changed={this.nameChangeHandler.bind(this, detail.id)}/>
-                                <InputTask taskChanged={this.taskChangeHandler.bind(this, detail.id)}/>
+                                <Input changed={this.nameChangeHandler.bind(this, detail.id)} placeholder="Enter your Name"/>
+                                <Input taskChanged={this.taskChangeHandler.bind(this, detail.id)} placeholder="Enter your Task"/>
                                 <Button className="del" onClick = {this.deleteHandler.bind(this, index)} >Delete</Button>
                                 </CardBody>
                             </div>
