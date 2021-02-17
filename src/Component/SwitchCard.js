@@ -60,7 +60,7 @@ class SwitchCard extends Component {
         detail.task = event.target.value;
         const details = Object.assign([],this.state.details);
         details[index] = detail;
-        this.setState({details:details});
+        this.setState({details:details})
     }
 
     render() {
@@ -80,7 +80,7 @@ class SwitchCard extends Component {
                                 <p>Task : {detail.task}</p>
                                 <p>ID : {detail.id}</p> 
                                 <Input changed={this.nameChangeHandler.bind(this, detail.id)} placeholder="Enter your Name"/>
-                                <Input taskChanged={this.taskChangeHandler.bind(this, detail.id)} placeholder="Enter your Task"/>
+                                <Input changed={this.taskChangeHandler.bind(this, detail.id)} placeholder="Enter your Task"/>
                                 <Button className="del" onClick = {this.deleteHandler.bind(this, index)} >Delete</Button>
                                 </CardBody>
                             </div>
